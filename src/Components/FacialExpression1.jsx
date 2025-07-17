@@ -51,7 +51,7 @@ const FacialExpression1 = () => {
   }, []);
 
   return (
-    <div className="relative flex flex-col items-center gap-6 p-6 bg-gray-900 rounded-2xl shadow-2xl border border-gray-700">
+    <div className="relative flex  items-center gap-6 p-6 bg-gray-900 rounded-2xl shadow-2xl border border-gray-700">
       <div className="overflow-hidden rounded-xl border-4 border-white shadow-lg">
         <video
           ref={videoRef}
@@ -62,7 +62,7 @@ const FacialExpression1 = () => {
       </div>
       <button
         onClick={detectMood}
-        className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition duration-200"
+        className="bg-[#2E2E2E] hover:bg-red-600 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition duration-200"
       >
         Detect Mood
       </button>
