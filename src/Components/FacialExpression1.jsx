@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import * as faceapi from "face-api.js";
+import { axios } from './../../node_modules/axios/dist/esm/axios';
 
 const FacialExpression1 = () => {
   const videoRef = useRef();
@@ -43,7 +44,12 @@ const FacialExpression1 = () => {
       }
     }
 
-    console.log("Detected mood:", _expression);
+    axios.get(`http://localhost:3000/mood=${_expression}`).then((response) => {
+      console.log("Mood detected:", _expression);
+      console.log("Songs for mood:", response.data);
+    }).catch((error) => {
+      console.error("Error fetching mood songs:", error);
+    });
   }
 
   useEffect(() => {
