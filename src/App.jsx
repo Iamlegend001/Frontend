@@ -4,7 +4,9 @@ import FacialExpression1 from "./Components/FacialExpression1";
 import MoodSongs from "./Components/MoodSongs";
 
 const App = () => {
-  const [songs, setSongs] = useState([]);
+    const [songs, setSongs] = useState([
+
+  ]);
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center px-4 gap-4">
       <h1 className="text-4xl font-bold mb-6 text-center">
